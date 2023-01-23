@@ -1,16 +1,20 @@
 import "./App.css";
+
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
-import Note from "./Components/Note";
-import notes from "./notes";
+// import Note from "./Components/Note";
+import InputArea from "./Components/InputArea";
 
 function App() {
   return (
     <div className="App">
       <Header />
-      {notes.map((note) => (
-        <Note key={note.key} header={note.title} desc={note.content} />
-      ))}
+      <InputArea
+        type="text"
+        placeholder1="Title"
+        placeholder2="Take a note..."
+        className="border-0"
+      />
       <Footer />
     </div>
   );
