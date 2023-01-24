@@ -6,7 +6,7 @@ function Footer() {
 
   return (
     <div>
-      <footer>
+      <footer className="position-absolute bottom-0">
         <p>Copyright © {currentYear}</p>
       </footer>
     </div>
