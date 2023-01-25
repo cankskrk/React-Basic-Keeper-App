@@ -1,6 +1,9 @@
 import React from "react";
 import cssNote from "./cssModules/note.module.css";
 
+import DeleteIcon from "@mui/icons-material/Delete";
+import Fab from "@mui/material/Fab";
+
 function Note({ id, header, desc, onDelete }) {
   const handleClick = () => {
     onDelete(id);
@@ -8,15 +11,17 @@ function Note({ id, header, desc, onDelete }) {
 
   return (
     <div className={`${cssNote.note}`}>
-      <h1>{header}</h1>
+      <h1 className="fs-3 mb-3">{header}</h1>
+      <hr class="border border-dark border-2 opacity-50"></hr>
       <p>{desc}</p>
-      <button
+      <Fab
         type="submit"
-        className={`btn m-2 btn-danger border-dark rounded-2 shadow`}
         onClick={handleClick}
+        color="error"
+        className="mt-3 mb-3"
       >
-        Delete
-      </button>
+        <DeleteIcon />
+      </Fab>
     </div>
   );
 }
